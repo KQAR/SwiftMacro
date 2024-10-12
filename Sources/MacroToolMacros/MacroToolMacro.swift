@@ -25,7 +25,7 @@ public struct StringifyMacro: ExpressionMacro {
     }
 }
 
-enum MacroError: Error, CustomStringConvertible {
+public enum MacroError: Error, CustomStringConvertible {
 
   case onlyFunction
   case onlyStringName
@@ -116,7 +116,7 @@ public struct TakeTimeMacro: BodyMacro {
 }
 
 @main
-struct MacroToolPlugin: CompilerPlugin {
+public struct MacroToolPlugin: CompilerPlugin {
     let providingMacros: [Macro.Type] = [
         StringifyMacro.self,
         LoggedMacro.self,
