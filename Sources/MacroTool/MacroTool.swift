@@ -9,3 +9,9 @@
 /// produces a tuple `(x + y, "x + y")`.
 @freestanding(expression)
 public macro stringify<T>(_ value: T) -> (T, String) = #externalMacro(module: "MacroToolMacros", type: "StringifyMacro")
+
+@attached(body)
+public macro Logged(_ n: String) = #externalMacro(module: "MacroToolMacros", type: "LoggedMacro")
+
+@attached(body)
+public macro TakeTime(_ label: String) = #externalMacro(module: "MacroToolMacros", type: "TakeTimeMacro")
