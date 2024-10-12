@@ -116,7 +116,7 @@ public struct TakeTimeMacro: BodyMacro {
 }
 
 @main
-public struct MacroToolPlugin: CompilerPlugin {
+struct MacroToolPlugin: CompilerPlugin {
     let providingMacros: [Macro.Type] = [
         StringifyMacro.self,
         LoggedMacro.self,
